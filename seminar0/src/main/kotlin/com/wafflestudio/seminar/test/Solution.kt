@@ -36,7 +36,6 @@ class Database(private val data: MutableList<String>) {
         if (recentDeleted.isEmpty()) {
             throw Exception("Error 200")
         }
-        val selectedStudent = data[pointer]
         val popped = recentDeleted.removeLast()
         data.add(popped.first, popped.second)
         if (popped.first <= pointer) {
